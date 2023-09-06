@@ -13,7 +13,7 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
             <Pressable onPress={() => navigation.navigate('TaskOne')} h="80px" w="70%" bg="#ff9900" alignItems="center" justifyContent="center" rounded={8} shadow={5} _pressed={{ backgroundColor: '#ffb545' }}>
                 <Text color="white" fontSize="xl" fontWeight="bold">Task One</Text>
             </Pressable>
-            <Pressable h="80px" w="70%" bg="#ff9900" alignItems="center" justifyContent="center" rounded={8} shadow={5} _pressed={{ backgroundColor: '#ffb545' }}>
+            <Pressable onPress={() => navigation.navigate('TaskTwo')} h="80px" w="70%" bg="#ff9900" alignItems="center" justifyContent="center" rounded={8} shadow={5} _pressed={{ backgroundColor: '#ffb545' }}>
                 <Text color="white" fontSize="xl" fontWeight="bold">Task Tow</Text>
             </Pressable>
         </VStack>

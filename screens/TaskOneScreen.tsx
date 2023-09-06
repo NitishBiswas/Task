@@ -45,15 +45,15 @@ const TaskOneScreen: React.FC = () => {
             .then((response) => response.json())
             .then((data) => {
                 setTodoList(data);
+                setLoading(false);
             })
             .catch((error) => {
                 console.error('Error fetching data:', error);
             });
-        setLoading(false);
     }, []);
 
     return (
-        <VStack w='full' bg="white">
+        <VStack w='full' bg="white" h="full">
             {loading ? <VStack justifyContent='center' alignItems='center' h='full'>
                 <ActivityIndicator size='large' color='orange' />
             </VStack> : <FlatList
